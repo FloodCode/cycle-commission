@@ -13,7 +13,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $host = request()->getHttpHost();
+        $re = '/(uk|en|ru|translate)\..+/';
+        preg_match($re, $host, $matches);
+
+        if (count($matches))
+        {
+            $locale = $matches[1] === 'translate' ? 'ach' : $matches[1];
+            app()->setLocale($locale);
+        }
     }
 
     /**

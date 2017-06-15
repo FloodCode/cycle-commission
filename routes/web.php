@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/commission', 'HomeController@commission')->name('commission');
+
+    Route::get('/locale/{code}', 'HomeController@locale');
 });
+
+Auth::routes();
