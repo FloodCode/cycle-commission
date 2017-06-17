@@ -1,0 +1,9 @@
+p.news-item-info {
+    margin: 10px 0;
+}
+
+span.horizontal-delimiter:before {
+    content: "|";
+    padding: 0 5px;
+    color: #cccccc;
+}

@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Models\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
@@ -20,5 +20,24 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Models\News::class, function (Faker\Generator $faker) {
+    $loremFaker = new Faker\Provider\Lorem($faker);
+
+    $message = '';
+
+    for ($i = 0; $i < 5; $i++) {
+        $message .= '<p>' . htmlspecialchars($loremFaker->text(500)) . '</p>';
+    }
+
+    $paragraphs = $loremFaker->paragraphs(5);
+
+    return [
+        'title' => $loremFaker->text(80),
+        'short_message' => $loremFaker->text(500),
+        'message' => $message,
+        'user_id' => 1
     ];
 });

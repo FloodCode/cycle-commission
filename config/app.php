@@ -2,6 +2,9 @@
 
 return [
 
+    'primary_domain' => env('PRIMARY_DOMAIN', 'commission.ml'),
+    'primary_protocol' => env('PRIMARY_PROTOCOL', 'http'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

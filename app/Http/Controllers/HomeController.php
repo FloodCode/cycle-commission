@@ -6,24 +6,15 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        
-    }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('home');
+    }
+
+    public function blank()
+    {
+        return view('blank');
     }
 
     public function commission()
@@ -33,15 +24,24 @@ class HomeController extends Controller
 
     public function locale($code)
     {
-        $localeValid = \App\Core\Locale::validateAppLocale($code);
-
-        if (!$localeValid)
+        try
+        {
+            $localeDomain = \App\Core\Locale::getSubdomain($code);
+        }
+        catch (\Exception $ex)
         {
             abort(404);
         }
 
-        session()->put('app-locale', $code);
+        $urlData = parse_url(url()->previous());
+        $urlData = $urlData ? $urlData : [];
 
-        return redirect()->back();
+        $protocol = array_has($urlData, 'scheme') ? $urlData['scheme'] : config('app.primary_protocol');
+        $path = array_has($urlData, 'path') ? $urlData['path'] : '/';
+        $query = array_has($urlData, 'query') ? '?' . $urlData['query'] : '';
+
+        $redirectUrl = sprintf('%s://%s%s%s', $protocol, $localeDomain, $path, $query);
+
+        return redirect($redirectUrl);
     }
 }

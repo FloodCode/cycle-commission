@@ -1,0 +1,79 @@
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.no-margin-left {
+    margin-left: 0 !important;
+}
+
+.no-margin-right {
+    margin-right: 0 !important;
+}
+
+.padding-vertical-s {
+    padding: 5px 0;
+}
+
+.padding-vertical-m {
+    padding: 10px 0;
+}
+
+.padding-vertical-l {
+    padding: 20px 0;
+}
+
+.margin-vertical-s {
+    margin: 5px 0;
+}
+
+.margin-vertical-m {
+    margin: 10px 0;
+}
+
+.margin-vertical-l {
+    margin: 20px 0;
+}
+
+.muted {
+    color: #888;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
