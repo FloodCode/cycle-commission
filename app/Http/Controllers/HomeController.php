@@ -17,11 +17,6 @@ class HomeController extends Controller
         return view('blank');
     }
 
-    public function commission()
-    {
-        return view('pages.commission');
-    }
-
     public function locale($code)
     {
         try

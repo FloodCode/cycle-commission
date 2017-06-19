@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+
 use App\Models\News;
 
 class NewsController extends Controller
 {
-
     public function index()
     {
         $newsData = News::orderBy('id', 'desc')->paginate(15);
@@ -38,17 +37,7 @@ class NewsController extends Controller
 
     protected function actionAdd(Request $request)
     {
-        $validationMessages = [
-            'title.required' => __('news.r_title'),
-            'short_message.required' => __('news.r_short_message'),
-            'message.required' => __('news.r_message')
-        ];
-
-        $this->validate($request, [
-            'title' => 'required|max:255',
-            'short_message' => 'required',
-            'message' => 'required'
-        ], $validationMessages);
+        $this->validate($request, $this->getValidationRules(), $this->getValidationMessages());
 
         $newsItem = new News();
         $newsItem->title = $request->input('title');
@@ -67,14 +56,7 @@ class NewsController extends Controller
             abort(403);
         }
 
-        try
-        {
-            $newsItem = News::findOrFail($id);
-        }
-        catch (ModelNotFoundException $ex)
-        {
-            abort(404);
-        }
+        $newsItem = News::findOrFail($id);
 
         if ($request->method() === 'POST')
         {
@@ -91,17 +73,7 @@ class NewsController extends Controller
 
     protected function actionEdit(Request $request, $newsItem)
     {
-        $validationMessages = [
-            'title.required' => __('news.r_title'),
-            'short_message.required' => __('news.r_short_message'),
-            'message.required' => __('news.r_message')
-        ];
-
-        $this->validate($request, [
-            'title' => 'required|max:255',
-            'short_message' => 'required',
-            'message' => 'required'
-        ], $validationMessages);
+        $this->validate($request, $this->getValidationRules(), $this->getValidationMessages());
 
         $newsItem->title = $request->input('title');
         $newsItem->short_message = $request->input('short_message');
@@ -118,15 +90,7 @@ class NewsController extends Controller
             abort(404);
         }
 
-        try
-        {
-            $newsItem = News::findOrFail($request->input('id'));
-        }
-        catch (ModelNotFoundException $ex)
-        {
-            abort(404);
-        }
-
+        $newsItem = News::findOrFail($request->input('id'));
         $newsItem->delete();
 
         return redirect()->to('/news');
@@ -134,18 +98,27 @@ class NewsController extends Controller
 
     public function view($id)
     {
-        try
-        {
-            $newsItem = News::findOrFail($id);
-        }
-        catch (ModelNotFoundException $ex)
-        {
-            abort(404);
-        }
-
+        $newsItem = News::findOrFail($id);
         $newsItem->incrementViews();
 
         return view('layouts.news.view', ['newsItem' => $newsItem]);
     }
 
+    protected function getValidationRules()
+    {
+        return [
+            'title' => 'required|max:255',
+            'short_message' => 'required',
+            'message' => 'required'
+        ];
+    }
+
+    protected function getValidationMessages()
+    {
+        return [
+            'title.required' => __('news.r_title'),
+            'short_message.required' => __('news.r_short_message'),
+            'message.required' => __('news.r_message')
+        ];
+    }
 }

@@ -5,11 +5,11 @@
     <ol class="breadcrumb">
         @if (Auth::check() && Auth::user()->isAdmin())
             <span class="float-right">
-                <a href="/news/edit/{{ $newsItem->id }}" class="btn btn-primary btn-xs">{{ __('news.edit') }}</a>
+                <a href="/news/edit/{{ $newsItem->id }}" class="btn btn-primary btn-xs">{{ __('main.edit') }}</a>
                 <form method="post" action="/news/delete" class="display-inline-block">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="id" value="{{ $newsItem->id }}">
-                    <button type="submit" class="btn btn-danger btn-xs">{{ __('news.delete') }}</button>
+                    <button type="submit" class="btn btn-danger btn-xs">{{ __('main.delete') }}</button>
                 </form>
             </span>
         @endif

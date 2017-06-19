@@ -19,6 +19,9 @@ return [
     'all_rights_reserved' => 'crwdns16804:0crwdne16804:0',
     'go_to_home_page' => 'crwdns16812:0crwdne16812:0',
     'cancel' => 'crwdns16821:0crwdne16821:0',
+    'add' => 'crwdns16845:0crwdne16845:0',
+    'delete' => 'crwdns16846:0crwdne16846:0',
+    'edit' => 'crwdns16847:0crwdne16847:0',
 
     // Errors
     // [

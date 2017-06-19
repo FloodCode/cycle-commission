@@ -10,9 +10,6 @@ return [
     'short_article_description' => 'crwdns16824:0crwdne16824:0',
     'add_news' => 'crwdns16819:0crwdne16819:0',
     'edit_news' => 'crwdns16820:0crwdne16820:0',
-    'add' => 'crwdns16828:0crwdne16828:0',
-    'delete' => 'crwdns16829:0crwdne16829:0',
-    'edit' => 'crwdns16830:0crwdne16830:0',
 
     'r_title' => 'crwdns16831:0crwdne16831:0',
     'r_short_message' => 'crwdns16832:0crwdne16832:0',

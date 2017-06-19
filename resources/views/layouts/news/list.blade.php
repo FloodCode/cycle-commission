@@ -5,7 +5,7 @@
     <ol class="breadcrumb">
         @if (Auth::check() && Auth::user()->isAdmin())
             <span class="float-right">
-                <a href="/news/add" class="btn btn-primary btn-xs">{{ __('news.add') }}</a>
+                <a href="/news/add" class="btn btn-primary btn-xs">{{ __('main.add') }}</a>
             </span>
         @endif
         <li><a href="/">{{ __('main.menu_home') }}</a></li>

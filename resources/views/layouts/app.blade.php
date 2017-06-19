@@ -57,7 +57,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{ route('home') }}">{{ __('main.menu_home') }}</a></li>
-                        <li><a href="{{ route('commission') }}">{{ __('main.menu_commission') }}</a></li>
+                        <li><a href="/pages/view/commission">{{ __('main.menu_commission') }}</a></li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -115,6 +115,10 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    @if (Auth::user()->isAdmin())
+                                        <li><a href="/pages/list">{{ __('pages.pages') }}</a></li>
+                                        <li role="separator" class="divider"></li>
+                                    @endif
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

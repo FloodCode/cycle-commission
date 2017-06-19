@@ -4,11 +4,11 @@
 <div class="container">
     <ol class="breadcrumb no-margin">
         <li><a href="/">{{ __('main.menu_home') }}</a></li>
-        <li><a href="/news">{{ __('main.menu_news') }}</a></li>
-        <li class="active">{{ __('news.' . $mode . '_news') }}</li>
+        <li><a href="/pages/list">{{ __('pages.pages_list') }}</a></li>
+        <li class="active">{{ __('pages.' . $mode . '_page') }}</li>
     </ol>
 
-    <h2 class="margin-vertical-l">{{ __('news.' . $mode . '_news') }}</h2>
+    <h2 class="margin-vertical-l">{{ __('pages.' . $mode . '_page') }}</h2>
 
     @if (count($errors))
         <div class="alert alert-danger">
@@ -23,27 +23,34 @@
     <form action="{{ $postUrl }}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
-            <label for="title">{{ __('news.article_name') }}:</label>
+            <label for="title">{{ __('pages.page_name') }}:</label>
             <input
                 type="text"
                 class="form-control"
                 id="title"
                 name="title"
-                placeholder="{{ __('news.article_name') }}"
-                value="{{ isset($newsItem) ? $newsItem->title : '' }}"
+                placeholder="{{ __('pages.page_name') }}"
+                value="{{ isset($pageItem) ? $pageItem->title : '' }}"
                 required>
         </div>
         <div class="form-group">
-            <label for="short_message">{{ __('news.short_article_description') }}:</label>
-            <textarea name="short_message" class="hidden" required>{{ isset($newsItem) ? $newsItem->short_message : '' }}</textarea>
+            <label for="name">{{ __('pages.page_url') }}:</label>
+            <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="{{ __('pages.page_url') }}"
+                value="{{ isset($pageItem) ? $pageItem->name : '' }}"
+                required>
         </div>
         <div class="form-group">
-            <label for="message">{{ __('news.full_article_text') }}:</label>
-            <textarea name="message" class="hidden" required>{{ isset($newsItem) ? $newsItem->message : '' }}</textarea>
+            <label for="content">{{ __('pages.page_content') }}:</label>
+            <textarea name="content" class="hidden" required>{{ isset($pageItem) ? $pageItem->content : '' }}</textarea>
         </div>
         <div class="text-right">
             <button type="submit" class="btn btn-primary">{{ __('main.' . $mode) }}</button>
-            <a href="{{ $mode === 'edit' ? '/news/view/' . $newsItem->id : '/news' }}" class="btn btn-default">{{ __('main.cancel') }}</a>
+            <a href="{{ $mode === 'edit' ? '/pages/view/' . $pageItem->name : '/pages/list' }}" class="btn btn-default">{{ __('main.cancel') }}</a>
         </div>
     </form>
 </div>
@@ -59,7 +66,6 @@
             language: locale === 'ach' ? jipt.target_language : locale
         };
 
-        CKEDITOR.replace('short_message', ckEditorOptions);
-        CKEDITOR.replace('message', ckEditorOptions);
+        CKEDITOR.replace('content', ckEditorOptions);
     </script>
 @endsection

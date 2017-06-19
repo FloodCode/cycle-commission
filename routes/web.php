@@ -15,7 +15,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/', 'HomeController@index')->name('home');
 
     // Pages
-    Route::get('/commission', 'HomeController@commission')->name('commission');
     Route::get('/blank', 'HomeController@blank')->name('blank');
 
     // Locale
@@ -24,12 +23,22 @@ Route::group(['middleware' => ['web']], function () {
     // News
     Route::get('/news', 'NewsController@index');
     Route::get('/news/add', 'NewsController@add');
-    Route::get('/news/view/{id}', 'NewsController@view');
     Route::get('/news/edit/{id}', 'NewsController@edit');
+    Route::get('/news/view/{id}', 'NewsController@view');
 
     Route::post('/news/add', 'NewsController@add');
     Route::post('/news/edit/{id}', 'NewsController@edit');
     Route::post('/news/delete', 'NewsController@delete');
+
+    // Pages
+    Route::get('/pages/list', 'PagesController@listPages');
+    Route::get('/pages/add', 'PagesController@add');
+    Route::get('/pages/edit/{pageName}', 'PagesController@edit');
+    Route::get('/pages/view/{pageName}', 'PagesController@view');
+
+    Route::post('/pages/add/', 'PagesController@add');
+    Route::post('/pages/edit/{pageName}', 'PagesController@edit');
+    Route::post('/pages/delete/', 'PagesController@delete');
 });
 
 Auth::routes();

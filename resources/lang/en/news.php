@@ -10,9 +10,6 @@ return [
     'short_article_description' => 'Description of article',
     'add_news' => 'Add news',
     'edit_news' => 'Edit news',
-    'add' => 'Add',
-    'delete' => 'Delete',
-    'edit' => 'Edit',
 
     'r_title' => 'Articte name is required',
     'r_short_message' => 'Article description is required',

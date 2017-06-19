@@ -19,6 +19,9 @@ return [
     'all_rights_reserved' => 'All rights reserved',
     'go_to_home_page' => 'Go to home page',
     'cancel' => 'Cancel',
+    'add' => 'Add',
+    'delete' => 'Delete',
+    'edit' => 'Edit',
 
     // Errors
     // [
