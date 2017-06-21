@@ -4,43 +4,43 @@
   <div class="carousel-inner">
 
     <div class="item active">
-      <img src="/images/1.jpg">
-       <div class="carousel-caption">
-        <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-      </div>
+        <img src="/images/1.jpg" alt="{{ __('main.app_name') }}">
+        <div class="carousel-caption">
+            <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        </div>
     </div><!-- End Item -->
 
      <div class="item">
-      <img src="/images/2.jpg">
-       <div class="carousel-caption">
-        <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-      </div>
+        <img src="/images/2.jpg" alt="{{ __('main.app_name') }}">
+        <div class="carousel-caption">
+            <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        </div>
     </div><!-- End Item -->
 
     <div class="item">
-      <img src="/images/3.jpg">
-       <div class="carousel-caption">
-        <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-      </div>
+        <img src="/images/3.jpg" alt="{{ __('main.app_name') }}">
+            <div class="carousel-caption">
+             <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
+             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        </div>
     </div><!-- End Item -->
 
     <div class="item">
-      <img src="/images/4.jpg">
-       <div class="carousel-caption">
-        <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-      </div>
+        <img src="/images/4.jpg" alt="{{ __('main.app_name') }}">
+            <div class="carousel-caption">
+             <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
+             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        </div>
     </div><!-- End Item -->
 
     <div class="item">
-      <img src="/images/5.jpg">
-       <div class="carousel-caption">
-        <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-      </div>
+        <img src="/images/5.jpg" alt="{{ __('main.app_name') }}">
+            <div class="carousel-caption">
+             <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
+             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        </div>
     </div><!-- End Item -->
 
   </div><!-- End Carousel Inner -->

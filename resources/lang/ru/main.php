@@ -2,8 +2,8 @@
 
 return [
 
-    'app_name' => 'Цикловая Комисcия ТК ТНТУ',
-    'shortname' => 'ЦК ТК ТНТУ',
+    'app_name' => 'Цикловая Комисcия ОПК',
+    'shortname' => 'ЦК ОПК',
     'cycle_commission' => 'Цикловая Комиcсия',
     'name' => 'Имя',
     'log_in' => 'Вход',
@@ -22,6 +22,12 @@ return [
     'add' => 'Добавить',
     'delete' => 'Удалить',
     'edit' => 'Редактировать',
+    'useful_links' => 'Полезные ссылки',
+    'last_block_more' => 'Подробнее',
+    'last_news' => 'Последние новости',
+    'map' => 'Карта',
+    'contacts' => 'Контакты',
+    'access_denied' => 'Доступ запрещен',
 
     // Errors
     // [
@@ -56,7 +62,20 @@ return [
 
         'menu_methodical_developments' => 'Методологические разработки',
         'menu_methodical_student_works' => 'Студенческие работы',
-        'menu_methodical_meeting_schedule' => 'Расписание заседаний'
+        'menu_methodical_meeting_schedule' => 'Расписание заседаний',
+    // ]
+
+    // Subjects
+    // [
+        'subj_internet' => 'Интернет',
+        'subj_algorithms' => 'Вычислительные методы и алгоритмы',
+        'subj_english' => 'Английский',
+        'subj_web' => 'Веб-технологии и веб-дизайн',
+        'subj_graphics' => 'Инженерная и компьютерная графика',
+        'subj_algorithmization' => 'Алгоритмизация и программирование',
+        'subj_oop' => 'Объектно ориентированное программирование',
+        'subj_db' => 'Организация баз данных и знаний',
+        'subj_computer_science' => 'Информатика'
     // ]
 
 ];

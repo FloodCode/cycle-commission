@@ -24,9 +24,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#1995dc">
+    <meta name="msapplication-TileColor" content="#d34615">
     <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#1995dc">
+    <meta name="theme-color" content="#d34615">
 
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
@@ -48,8 +48,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ __('main.shortname') }}
+                    <a class="navbar-brand no-padding" href="{{ url('/') }}">
+                        <img src="/images/logo-menu.png" alt="Logo">
                     </a>
                 </div>
 
@@ -65,10 +65,10 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="http://atutor.tk.te.ua/" target="_blank">{{ __('main.menu_student_materials') }}</a></li>
-                                <li><a href="/blank">{{ __('main.menu_student_programs') }}</a></li>
-                                <li><a href="/blank">{{ __('main.menu_student_test_questions') }}</a></li>
-                                <li><a href="/blank">{{ __('main.menu_student_announcements') }}</a></li>
+                                <li><a href="/training_materials">{{ __('main.menu_student_materials') }}</a></li>
+                                <li><a href="/pages/view/educational_programs">{{ __('main.menu_student_programs') }}</a></li>
+                                <li><a href="/pages/view/test_questions">{{ __('main.menu_student_test_questions') }}</a></li>
+                                <li><a href="/pages/view/announcements">{{ __('main.menu_student_announcements') }}</a></li>
                             </ul>
                         </li>
 
@@ -144,8 +144,8 @@
             <hr>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6"><p>{{ __('main.app_name') }}</p></div>
-                    <div class="col-md-6"><p class="text-right">{{ __('main.all_rights_reserved') }}, {{ date('Y') }}</p></div>
+                    <div class="col-xs-6"><p>{{ __('main.app_name') }}</p></div>
+                    <div class="col-xs-6"><p class="text-right">{{ __('main.all_rights_reserved') }}, {{ date('Y') }}</p></div>
                 </div>
             </div>
         </div>

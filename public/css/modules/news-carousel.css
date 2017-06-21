@@ -32,6 +32,7 @@
 }
 
 #newsCarousel .list-group .list-group-item.active {
+    color: #000;
     background-color: #eee;
 }
 

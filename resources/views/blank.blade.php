@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container">
-    Blank page
+    {{ __('main.access_denied') }}
 </div>
 @endsection

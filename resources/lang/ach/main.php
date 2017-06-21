@@ -2,8 +2,8 @@
 
 return [
 
-    'app_name' => 'crwdns16739:0crwdne16739:0',
-    'shortname' => 'crwdns16723:0crwdne16723:0',
+    'app_name' => 'crwdns16848:0crwdne16848:0',
+    'shortname' => 'crwdns16849:0crwdne16849:0',
     'cycle_commission' => 'crwdns16790:0crwdne16790:0',
     'name' => 'crwdns16731:0crwdne16731:0',
     'log_in' => 'crwdns16813:0crwdne16813:0',
@@ -22,6 +22,12 @@ return [
     'add' => 'crwdns16845:0crwdne16845:0',
     'delete' => 'crwdns16846:0crwdne16846:0',
     'edit' => 'crwdns16847:0crwdne16847:0',
+    'useful_links' => 'crwdns16860:0crwdne16860:0',
+    'last_block_more' => 'crwdns16861:0crwdne16861:0',
+    'last_news' => 'crwdns16862:0crwdne16862:0',
+    'map' => 'crwdns16863:0crwdne16863:0',
+    'contacts' => 'crwdns16864:0crwdne16864:0',
+    'access_denied' => 'crwdns16865:0crwdne16865:0',
 
     // Errors
     // [
@@ -56,7 +62,20 @@ return [
 
         'menu_methodical_developments' => 'crwdns16799:0crwdne16799:0',
         'menu_methodical_student_works' => 'crwdns16800:0crwdne16800:0',
-        'menu_methodical_meeting_schedule' => 'crwdns16801:0crwdne16801:0'
+        'menu_methodical_meeting_schedule' => 'crwdns16801:0crwdne16801:0',
+    // ]
+
+    // Subjects
+    // [
+        'subj_internet' => 'crwdns16850:0crwdne16850:0',
+        'subj_algorithms' => 'crwdns16851:0crwdne16851:0',
+        'subj_english' => 'crwdns16852:0crwdne16852:0',
+        'subj_web' => 'crwdns16853:0crwdne16853:0',
+        'subj_graphics' => 'crwdns16854:0crwdne16854:0',
+        'subj_algorithmization' => 'crwdns16859:0crwdne16859:0',
+        'subj_oop' => 'crwdns16856:0crwdne16856:0',
+        'subj_db' => 'crwdns16857:0crwdne16857:0',
+        'subj_computer_science' => 'crwdns16858:0crwdne16858:0'
     // ]
 
 ];

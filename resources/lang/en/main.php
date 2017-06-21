@@ -2,15 +2,15 @@
 
 return [
 
-    'app_name' => 'Cycle Commission TC TNTU',
-    'shortname' => 'CC TC TNTU',
+    'app_name' => 'Cycle Commission OPK',
+    'shortname' => 'CC OPK',
     'cycle_commission' => 'The Commission',
     'name' => 'Name',
     'log_in' => 'Log in',
     'register' => 'Registration',
     'password' => 'Password',
     'confirm_password' => 'Confirm password',
-    'reset_password' => 'Recover password',
+    'reset_password' => 'Password recover',
     'forgot_password' => 'Forgot your password?',
     'send_password_reset_link' => 'Send password reset link',
     'email_address' => 'E-mail address',
@@ -22,6 +22,12 @@ return [
     'add' => 'Add',
     'delete' => 'Delete',
     'edit' => 'Edit',
+    'useful_links' => 'Useful links',
+    'last_block_more' => 'More',
+    'last_news' => 'Latest news',
+    'map' => 'Map',
+    'contacts' => 'Contacts',
+    'access_denied' => 'Access denied',
 
     // Errors
     // [
@@ -56,7 +62,20 @@ return [
 
         'menu_methodical_developments' => 'Methodical developments',
         'menu_methodical_student_works' => 'Student works',
-        'menu_methodical_meeting_schedule' => 'Schedule of meetings'
+        'menu_methodical_meeting_schedule' => 'Schedule of meetings',
+    // ]
+
+    // Subjects
+    // [
+        'subj_internet' => 'Internet',
+        'subj_algorithms' => 'Algorithms and computational methods',
+        'subj_english' => 'English',
+        'subj_web' => 'Web technologies and web design',
+        'subj_graphics' => 'Engineering and computer graphics',
+        'subj_algorithmization' => 'Algorithmization and programming',
+        'subj_oop' => 'Object-oriented programming',
+        'subj_db' => 'Organization of databases and knowledge',
+        'subj_computer_science' => 'Computer Science'
     // ]
 
 ];

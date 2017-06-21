@@ -9,12 +9,19 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('home');
+        $newsData = \App\Models\News::orderBy('id', 'desc')->limit(5)->get();
+
+        return view('home', ['newsData' => $newsData]);
     }
 
     public function blank()
     {
         return view('blank');
+    }
+
+    public function trainingMaterials()
+    {
+        return view('pages.training_materials');
     }
 
     public function locale($code)
