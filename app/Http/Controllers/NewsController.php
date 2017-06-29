@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Image;
 
 use App\Models\News;
 
@@ -44,6 +45,15 @@ class NewsController extends Controller
         $newsItem->short_message = $request->input('short_message');
         $newsItem->message = $request->input('message');
         $newsItem->user_id = Auth::user()->id;
+
+        if ($request->hasFile('picture')) {
+            $image = $request->file('picture');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('/img/news/' . $filename);
+            Image::make($image)->fit(720, 450)->save($location);
+            $newsItem->picture = $filename;
+        }
+
         $newsItem->save();
 
         return redirect()->to('/news/view/' . $newsItem->id);
@@ -78,6 +88,16 @@ class NewsController extends Controller
         $newsItem->title = $request->input('title');
         $newsItem->short_message = $request->input('short_message');
         $newsItem->message = $request->input('message');
+
+        if ($request->hasFile('picture')) {
+            $image = $request->file('picture');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('/img/news/' . $filename);
+            Image::make($image)->fit(720, 450)->save($location);
+            $newsItem->deletePicture();
+            $newsItem->picture = $filename;
+        }
+
         $newsItem->save();
 
         return redirect()->to('/news/view/' . $newsItem->id);
@@ -85,6 +105,11 @@ class NewsController extends Controller
 
     public function delete(Request $request)
     {
+        if (!Auth::check() || !Auth::user()->isAdmin())
+        {
+            abort(403);
+        }
+
         if (!$request->has('id'))
         {
             abort(404);
@@ -109,7 +134,8 @@ class NewsController extends Controller
         return [
             'title' => 'required|max:255',
             'short_message' => 'required',
-            'message' => 'required'
+            'message' => 'required',
+            'picture' => 'image'
         ];
     }
 

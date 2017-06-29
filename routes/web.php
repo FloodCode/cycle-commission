@@ -40,6 +40,16 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/pages/add/', 'PagesController@add');
     Route::post('/pages/edit/{pageName}', 'PagesController@edit');
     Route::post('/pages/delete/', 'PagesController@delete');
+
+    // Announcements
+    Route::get('/announcements', 'AnnouncementsController@index');
+    Route::get('/announcements/add', 'AnnouncementsController@add');
+    Route::get('/announcements/edit/{id}', 'AnnouncementsController@edit');
+    Route::get('/announcements/view/{id}', 'AnnouncementsController@view');
+
+    Route::post('/announcements/add', 'AnnouncementsController@add');
+    Route::post('/announcements/edit/{id}', 'AnnouncementsController@edit');
+    Route::post('/announcements/delete', 'AnnouncementsController@delete');
 });
 
 Auth::routes();

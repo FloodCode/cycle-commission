@@ -66,9 +66,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="/training_materials">{{ __('main.menu_student_materials') }}</a></li>
-                                <li><a href="/pages/view/educational_programs">{{ __('main.menu_student_programs') }}</a></li>
                                 <li><a href="/pages/view/test_questions">{{ __('main.menu_student_test_questions') }}</a></li>
-                                <li><a href="/pages/view/announcements">{{ __('main.menu_student_announcements') }}</a></li>
+                                <li><a href="/announcements">{{ __('main.menu_student_announcements') }}</a></li>
                             </ul>
                         </li>
 
@@ -78,9 +77,11 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="/blank">{{ __('main.menu_methodical_developments') }}</a></li>
+                                @if (!Auth::guest() && Auth::user()->hasCommissionAccess())
+                                    <li><a href="/blank">{{ __('main.menu_methodical_developments') }}</a></li>
+                                @endif
                                 <li><a href="/blank">{{ __('main.menu_methodical_student_works') }}</a></li>
-                                <li><a href="/blank">{{ __('main.menu_methodical_meeting_schedule') }}</a></li>
+                                <li><a href="/pages/view/meetings_schedule">{{ __('main.menu_methodical_meeting_schedule') }}</a></li>
                             </ul>
                         </li>
 

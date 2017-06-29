@@ -4,6 +4,7 @@ return [
 
     'primary_domain' => env('PRIMARY_DOMAIN', 'commission.ml'),
     'primary_protocol' => env('PRIMARY_PROTOCOL', 'http'),
+    'primary_port' => env('PRIMARY_PORT', '80'),
 
     /*
     |--------------------------------------------------------------------------
@@ -165,6 +166,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -228,6 +230,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Image' => Intervention\Image\Facades\Image::class
 
     ],
 

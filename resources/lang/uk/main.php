@@ -2,7 +2,7 @@
 
 return [
 
-    'app_name' => 'Циклова Комісія ОПК',
+    'app_name' => 'Циклова комісія ОПК',
     'shortname' => 'ЦК ОПК',
     'cycle_commission' => 'Циклова комісія',
     'name' => 'Ім\'я',
@@ -15,7 +15,7 @@ return [
     'send_password_reset_link' => 'Відправити посилання відновлення пароля',
     'email_address' => 'E-mail адреса',
     'remember_me' => 'Запам\'ятати мене',
-    'college_history' => 'Історія коледжу',
+    'commission_history' => 'Історія циклової комісії',
     'all_rights_reserved' => 'Всі права захищено',
     'go_to_home_page' => 'Перейти на головну сторінку',
     'cancel' => 'Відмінити',
@@ -56,7 +56,6 @@ return [
         'menu_language' => 'Мова',
 
         'menu_student_materials' => 'Навчальні матеріали',
-        'menu_student_programs' => 'Навчальні програми',
         'menu_student_test_questions' => 'Тестові запитання',
         'menu_student_announcements' => 'Оголошення',
 

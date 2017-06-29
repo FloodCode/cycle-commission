@@ -2,7 +2,7 @@
 
 return [
 
-    'app_name' => 'Цикловая Комисcия ОПК',
+    'app_name' => 'Цикловая комисcия ОПК',
     'shortname' => 'ЦК ОПК',
     'cycle_commission' => 'Цикловая Комиcсия',
     'name' => 'Имя',
@@ -15,7 +15,7 @@ return [
     'send_password_reset_link' => 'Отправить ссылку сброса пароля',
     'email_address' => 'E-mail адрес',
     'remember_me' => 'Запомнить меня',
-    'college_history' => 'История колледжа',
+    'commission_history' => 'История цикловой комисcии',
     'all_rights_reserved' => 'Все права защищены',
     'go_to_home_page' => 'Перейти на главную страницу',
     'cancel' => 'Отмена',

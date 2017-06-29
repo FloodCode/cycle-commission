@@ -2,7 +2,7 @@
 
 return [
 
-    'app_name' => 'crwdns16848:0crwdne16848:0',
+    'app_name' => 'crwdns16866:0crwdne16866:0',
     'shortname' => 'crwdns16849:0crwdne16849:0',
     'cycle_commission' => 'crwdns16790:0crwdne16790:0',
     'name' => 'crwdns16731:0crwdne16731:0',
@@ -15,7 +15,7 @@ return [
     'send_password_reset_link' => 'crwdns16734:0crwdne16734:0',
     'email_address' => 'crwdns16729:0crwdne16729:0',
     'remember_me' => 'crwdns16730:0crwdne16730:0',
-    'college_history' => 'crwdns16802:0crwdne16802:0',
+    'commission_history' => 'crwdns16867:0crwdne16867:0',
     'all_rights_reserved' => 'crwdns16804:0crwdne16804:0',
     'go_to_home_page' => 'crwdns16812:0crwdne16812:0',
     'cancel' => 'crwdns16821:0crwdne16821:0',

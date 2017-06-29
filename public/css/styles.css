@@ -1,3 +1,21 @@
+.readable li,
+.readable p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.readable p {
+    margin: 0 0 15px 0;
+}
+
+.panel-heading {
+    font-size: 1.2em;
+}
+
+.at-share-btn-elements {
+    display: inline-block;
+}
+
 .no-padding {
     padding: 0 !important;
 }
@@ -141,4 +159,23 @@
 
 #photoCarousel .carousel-inner {
     border-radius: 4px;
+}
+
+img.left {
+    float: left;
+    margin-right: 15px;
+}
+
+p.item-info {
+    margin: 10px 0;
+}
+
+span.horizontal-delimiter:before {
+    content: "|";
+    padding: 0 5px;
+    color: #cccccc;
+}
+
+.item-info-full .item-info {
+    margin: 3px 0;
 }

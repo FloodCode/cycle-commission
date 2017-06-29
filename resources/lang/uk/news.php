@@ -7,6 +7,7 @@ return [
     'views' => 'Перегляди',
     'article_name' => 'Назва статті',
     'full_article_text' => 'Повний текст статті',
+    'picture' => 'Зображення',
     'short_article_description' => 'Короткий опис статті',
     'add_news' => 'Додати новину',
     'edit_news' => 'Редагувати новину',

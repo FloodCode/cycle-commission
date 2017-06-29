@@ -2,7 +2,7 @@
 
 return [
 
-    'app_name' => 'Cycle Commission OPK',
+    'app_name' => 'Cycle commission of OPK',
     'shortname' => 'CC OPK',
     'cycle_commission' => 'The Commission',
     'name' => 'Name',
@@ -15,7 +15,7 @@ return [
     'send_password_reset_link' => 'Send password reset link',
     'email_address' => 'E-mail address',
     'remember_me' => 'Remember me',
-    'college_history' => 'History of the College',
+    'commission_history' => 'Cycle commission history',
     'all_rights_reserved' => 'All rights reserved',
     'go_to_home_page' => 'Go to home page',
     'cancel' => 'Cancel',

@@ -5,7 +5,10 @@
     <ol class="breadcrumb">
         @if (Auth::check() && Auth::user()->isAdmin())
             <span class="float-right">
-                <a href="/pages/add" class="btn btn-primary btn-xs">{{ __('main.add') }}</a>
+                <a href="/pages/add" class="btn btn-primary btn-xs">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    {{ __('main.add') }}
+                </a>
             </span>
         @endif
         <li><a href="/">{{ __('main.menu_home') }}</a></li>
@@ -28,16 +31,16 @@
                         <td>{{ $pageItem->name }}</td>
                         <td class="text-right">
                             <a href="/pages/view/{{ $pageItem->name }}" class="btn btn-primary btn-xs">
-                                <span class="glyphicon glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                             </a>
                             <a href="/pages/edit/{{ $pageItem->name }}" class="btn btn-primary btn-xs">
-                                <span class="glyphicon glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                             </a>
                             <form method="post" action="/pages/delete" class="display-inline-block">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="hidden" name="name" value="{{ $pageItem->name }}">
                                 <button type="submit" class="btn btn-danger btn-xs">
-                                    <span class="glyphicon glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </button>
                             </form>
                         </td>

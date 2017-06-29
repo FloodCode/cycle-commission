@@ -1,9 +1,7 @@
-p.news-item-info {
-    margin: 10px 0;
-}
-
-span.horizontal-delimiter:before {
-    content: "|";
-    padding: 0 5px;
-    color: #cccccc;
+.news-picture {
+    width: 300px;
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #666;
+    border-radius: 5px;
 }

@@ -29,8 +29,23 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function hasAdminAccess()
+    {
+        return $this->isAdmin();
+    }
+
+    public function hasCommissionAccess()
+    {
+        return $this->isCommission() || $this->hasAdminAccess();
+    }
+
     public function isAdmin()
     {
         return (int)$this->role === \App\Core\UserRole::ADMIN;
+    }
+
+    public function isCommission()
+    {
+        return (int)$this->role === \App\Core\UserRole::COMMISSION;
     }
 }

@@ -39,10 +39,11 @@ class HomeController extends Controller
         $urlData = $urlData ? $urlData : [];
 
         $protocol = array_has($urlData, 'scheme') ? $urlData['scheme'] : config('app.primary_protocol');
+        $port = array_has($urlData, 'port') ? ':' . $urlData['port'] : config('app.primary_protocol');
         $path = array_has($urlData, 'path') ? $urlData['path'] : '/';
         $query = array_has($urlData, 'query') ? '?' . $urlData['query'] : '';
 
-        $redirectUrl = sprintf('%s://%s%s%s', $protocol, $localeDomain, $path, $query);
+        $redirectUrl = sprintf('%s://%s%s%s', $protocol, $localeDomain, $port, $path, $query);
 
         return redirect($redirectUrl);
     }
