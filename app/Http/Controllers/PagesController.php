@@ -18,11 +18,6 @@ class PagesController extends Controller
 
     public function add(Request $request)
     {
-        if (!Auth::check() || !Auth::user()->isAdmin())
-        {
-            abort(403);
-        }
-
         if ($request->method() === 'POST')
         {
             return $this->actionAdd($request);
@@ -51,11 +46,6 @@ class PagesController extends Controller
 
     public function edit(Request $request, $pageName)
     {
-        if (!Auth::check() || !Auth::user()->isAdmin())
-        {
-            abort(403);
-        }
-
         $pageItem = Page::findOrFail($pageName);
 
         if ($request->method() === 'POST')

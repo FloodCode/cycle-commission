@@ -19,11 +19,6 @@ class NewsController extends Controller
 
     public function add(Request $request)
     {
-        if (!Auth::check() || !Auth::user()->isAdmin())
-        {
-            abort(403);
-        }
-
         if ($request->method() === 'POST')
         {
             return $this->actionAdd($request);
@@ -61,11 +56,6 @@ class NewsController extends Controller
 
     public function edit(Request $request, $id)
     {
-        if (!Auth::check() || !Auth::user()->isAdmin())
-        {
-            abort(403);
-        }
-
         $newsItem = News::findOrFail($id);
 
         if ($request->method() === 'POST')

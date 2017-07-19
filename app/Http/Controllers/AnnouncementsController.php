@@ -18,11 +18,6 @@ class AnnouncementsController extends Controller
 
     public function add(Request $request)
     {
-        if (!Auth::check() || !Auth::user()->isAdmin())
-        {
-            abort(403);
-        }
-
         if ($request->method() === 'POST')
         {
             return $this->actionAdd($request);
@@ -50,11 +45,6 @@ class AnnouncementsController extends Controller
 
     public function edit(Request $request, $id)
     {
-        if (!Auth::check() || !Auth::user()->isAdmin())
-        {
-            abort(403);
-        }
-
         $announcementsItem = Announcement::findOrFail($id);
 
         if ($request->method() === 'POST')
@@ -83,11 +73,6 @@ class AnnouncementsController extends Controller
 
     public function delete(Request $request)
     {
-        if (!Auth::check() || !Auth::user()->isAdmin())
-        {
-            abort(403);
-        }
-
         if (!$request->has('id'))
         {
             abort(404);
